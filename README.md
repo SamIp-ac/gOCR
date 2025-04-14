@@ -4,8 +4,10 @@ OCR and PDF processing utilities
 
 ## Installation
 
+Remarks: default deploy on local lm studio / cli
+
 ```bash
-pip install git+https://github.com/yourusername/gOCR.git
+pip install git+https://github.com/SamIp-ac/gOCR.git
 ```
 
  ## Usage Example:
@@ -31,3 +33,24 @@ response = processor.call_chat_completion(
 
 print(response)
 ```
+
+## For testing
+```shell
+conda create -n gOCR_py312 python=3.12
+conda activate gOCR_py312
+```
+
+conda install -c conda-forge poppler
+pip install -e .
+
+Make sure you have poppler installed on your system (required by pdf2image):
+On macOS: brew install poppler
+On Ubuntu: apt-get install poppler-utils
+On Windows: Download and install poppler binaries
+
+ocr = gOCR(llm_host="your_llm_host")
+result = ocr.process_pdf_with_images(
+    pdf_path="your.pdf",
+    system_prompt="Analyze this document",
+    user_prompt="Extract all the information from these images"
+)
