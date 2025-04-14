@@ -32,6 +32,15 @@ response = processor.call_chat_completion(
 )
 
 print(response)
+
+ocr = gOCR(llm_host="your_llm_host")
+result = ocr.process_pdf_with_images(
+    pdf_path="your.pdf",
+    system_prompt="Analyze this document",
+    user_prompt="Extract all the information from these images"
+)
+
+print(result)
 ```
 
 ## For testing
