@@ -38,19 +38,13 @@ print(response)
 ```shell
 conda create -n gOCR_py312 python=3.12
 conda activate gOCR_py312
+
+pip3 install -e .
 ```
 
-conda install -c conda-forge poppler
 pip install -e .
 
 Make sure you have poppler installed on your system (required by pdf2image):
 On macOS: brew install poppler
 On Ubuntu: apt-get install poppler-utils
 On Windows: Download and install poppler binaries
-
-ocr = gOCR(llm_host="your_llm_host")
-result = ocr.process_pdf_with_images(
-    pdf_path="your.pdf",
-    system_prompt="Analyze this document",
-    user_prompt="Extract all the information from these images"
-)
