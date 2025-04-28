@@ -9,6 +9,7 @@ setup(
         'pdfplumber>=0.7.0',
         'pdf2image>=1.16.3',
         'Pillow>=10.0.0',
+        'langchain_community>=0.3.21'
     ],
     author="SamIppp",
     author_email="i60996395@gmail.com",
