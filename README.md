@@ -7,7 +7,7 @@ OCR and PDF processing utilities
 Remarks: default deploy on local lm studio / cli, "Try mmap()" -> false
 
 ```bash
-pip install git+https://github.com/SamIp-ac/gOCR.git
+pip3 install git+https://github.com/SamIp-ac/gOCR.git
 ```
  ## Usage Example:
  ```python
