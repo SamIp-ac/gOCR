@@ -2,6 +2,13 @@
 
 OCR and PDF processing utilities
 
+## Pre-request
+
+Make sure you have poppler installed on your system (required by pdf2image):
+On macOS: brew install poppler
+On Ubuntu: apt-get install poppler-utils
+On Windows: Download and install poppler binaries
+
 ## Installation
 
 Remarks: default deploy on local lm studio / cli, "Try mmap()" -> false
@@ -9,6 +16,7 @@ Remarks: default deploy on local lm studio / cli, "Try mmap()" -> false
 ```bash
 pip3 install git+https://github.com/SamIp-ac/gOCR.git
 ```
+
  ## Usage Example:
  ```python
  from gOCR import gOCR
@@ -64,9 +72,3 @@ streamlit run app.py
 mkdir ~/lib
 ln -s $(brew --prefix zbar)/lib/libzbar.dylib ~/lib/libzbar.dylib
 ```
-
-
-Make sure you have poppler installed on your system (required by pdf2image):
-On macOS: brew install poppler
-On Ubuntu: apt-get install poppler-utils
-On Windows: Download and install poppler binaries
