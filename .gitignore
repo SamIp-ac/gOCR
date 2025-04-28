@@ -173,3 +173,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 test
+.DS_Store
+app.py
+img_qr_reader.py
+main.py
+pdf_qr2img.py
+gOCR/assets
